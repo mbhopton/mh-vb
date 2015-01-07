@@ -1,6 +1,12 @@
 Attribute VB_Name = "Utils"
 Option Explicit
 
+'==============================================================
+' Written: 	M Hopton
+' Purpose:	Various utilities for dates and opening workbooks
+' Saved: 	8 Jan 2015
+'==============================================================
+
 ' Function to change date to the first day in the month
 Public Function SOM(d As Date) As Date
     SOM = DateSerial(Year(d), Month(d), 1)

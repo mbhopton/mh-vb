@@ -1,6 +1,12 @@
 Attribute VB_Name = "CustomUI"
 Option Explicit
 
+'==============================================================
+' Written: 	M Hopton
+' Purpose:	Routines for Custom Excel Ribbon
+' Saved: 	8 Jan 2015
+'==============================================================
+
 Public Declare PtrSafe Sub CopyMemory Lib "kernel32" Alias "RtlMoveMemory" _
     (ByRef destination As Any, ByRef source As Any, ByVal length As Long)
 

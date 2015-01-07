@@ -1,4 +1,11 @@
 Attribute VB_Name = "FaceID"
+
+'==============================================================
+' Written: 	Unknown - copied from Internet, modified by M Hopton
+' Purpose:	Function to output icons to a temporary toolbar
+' Saved: 	8 Jan 2015
+'==============================================================
+
 Sub ShowFaceIDs2()
     Dim NewToolbar As CommandBar
     Dim TopPos As Long, LeftPos As Long

@@ -1,6 +1,12 @@
 Attribute VB_Name = "Registry"
 Option Explicit
 
+'==============================================================
+' Written: 	M Hopton, copied from Internet
+' Purpose:	Routines to read and write registry
+' Saved: 	8 Jan 2015
+'==============================================================
+
 'sets the registry key i_RegKey to the
 'value i_Value with type i_Type
 'if i_Type is omitted, the value will be saved as string

@@ -1,6 +1,12 @@
 Attribute VB_Name = "RowHeight"
 Option Explicit
 
+'==============================================================
+' Written: 	M Hopton
+' Purpose:	Routines to adjust Row Height
+' Saved: 	8 Jan 2015
+'==============================================================
+
 'adjust the row height by iDir lines (up or down)
 Sub AdjustHeight(iDir As Integer)
     Dim fH As Double, iFont As Integer, fStd As Double

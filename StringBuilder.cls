@@ -9,7 +9,29 @@ Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 Option Explicit
 
-' Class: StringBuilder
+'==============================================================
+' Written: 	M Hopton
+' Purpose:	StringBuilder class
+' Saved: 	8 Jan 2015
+'==============================================================
+'	The string buffer size is handled automatically in all cases
+'
+'	set sb = new StringBuilder
+'	sb.length 		r/w		get or set string length
+'	sb.capacity		r/w		get or set buffer length, will not truncate the string
+'	sb.text			r/w		get or set text
+'	sb.SubString	r		get a substring
+'	sb.Chars		r/w		get or set a single character
+'	sb.LineDelim	r/w		get or set the line delimiter (default vbNewLine)
+'	sb.Clear		a		clear text and reset buffer
+'	sb.AppendLine	a		add a newline, with optional text
+'	sb.Append		a		add text to end of buffer
+'	sb.Insert		a		insert text
+'	sb.Remove		a		remove text
+'	sb.Replace		a		replace text
+'	sb.Find			a		find text
+'	sb.FindRev		a		find text backwards
+'	sb.DebugFlag	r/w		enable debugging to VBA immediate window
 
 Private Const initialLength As Long = 64
 

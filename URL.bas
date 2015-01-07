@@ -1,6 +1,18 @@
 Attribute VB_Name = "URL"
 Option Explicit
 
+'==============================================================
+' Written: 	M Hopton
+' Purpose:	Function to decode URL
+' Saved: 	8 Jan 2015
+'==============================================================
+
+' Function to decode URL
+'	it replaces:
+'		+ with space
+'		%uXXXX with equivalent unicode character
+'		%XX with equivalent hex character
+'	uses StringBuilder class
 Function urlDecode(sEncodedURL As String) As String
 
 On Error GoTo Catch
