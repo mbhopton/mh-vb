@@ -7,7 +7,8 @@ Option Explicit
 ' Saved: 	8 Jan 2015
 '==============================================================
 
-'adjust the row height by iDir lines (up or down)
+'==============================================================
+' Adjust the row height by iDir lines (up or down)
 Sub AdjustHeight(iDir As Integer)
     Dim fH As Double, iFont As Integer, fStd As Double
     
@@ -22,17 +23,20 @@ Sub AdjustHeight(iDir As Integer)
     ActiveCell.RowHeight = fH
 End Sub
 
-'increase the row height by 1 line
+'==============================================================
+' Increase the row height by 1 line
 Sub IncHeight()
     AdjustHeight 1
 End Sub
 
-'decrease the row height by 1 line
+'==============================================================
+' Decrease the row height by 1 line
 Sub DecHeight()
     AdjustHeight -1
 End Sub
 
-'adjust row height in selection to multiple of standard height
+'==============================================================
+' Adjust row height in selection to multiple of standard height
 '   with some additional space
 Sub SpaceH()
     Dim fH As Double, iFont As Integer, fStd As Double
@@ -49,4 +53,3 @@ Sub SpaceH()
         r.RowHeight = fH
     Next
 End Sub
-
