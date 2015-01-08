@@ -3,16 +3,16 @@ Option Explicit
 
 '==============================================================
 ' Written: 	M Hopton
-' Purpose:	Function to decode URL
+' Purpose:	Fuctions for URL in VBA
 ' Saved: 	8 Jan 2015
 '==============================================================
 
-' Function to decode URL
-'	it replaces:
+' Function to decode URL, it replaces:
 '		+ with space
 '		%uXXXX with equivalent unicode character
-'		%XX with equivalent hex character
+'		%XX with equivalent ascii character
 '	uses StringBuilder class
+
 Function urlDecode(sEncodedURL As String) As String
 
 On Error GoTo Catch
