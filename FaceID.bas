@@ -2,7 +2,7 @@ Attribute VB_Name = "FaceID"
 
 '==============================================================
 ' Written: 	Unknown - copied from Internet, modified by M Hopton
-' Purpose:	Function to output icons to a temporary toolbar
+' Purpose:	Function to output icons to sheet via a temporary toolbar
 ' Saved: 	8 Jan 2015
 '==============================================================
 
