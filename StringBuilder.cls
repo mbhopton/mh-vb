@@ -7,6 +7,7 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
+Attribute VB_Description = "String builder class"
 Option Explicit
 
 '==============================================================
@@ -17,9 +18,9 @@ Option Explicit
 '	The string buffer size is handled automatically in all cases
 '
 '	set sb = new StringBuilder
-'	sb.length 		r/w		get or set string length
-'	sb.capacity		r/w		get or set buffer length, will not truncate the string
-'	sb.text			r/w		get or set text
+'	sb.Length 		r/w		get or set string length
+'	sb.Capacity		r/w		get or set buffer length, will not truncate the string
+'	sb.Text			r/w		get or set text
 '	sb.SubString	r		get a substring
 '	sb.Chars		r/w		get or set a single character
 '	sb.LineDelim	r/w		get or set the line delimiter (default vbNewLine)
@@ -56,12 +57,12 @@ Public Property Let DebugFlag(ByVal vNewValue As Boolean)
 End Property
 
 'Get length
-Public Property Get length() As Long
-    length = curLength
+Public Property Get Length() As Long
+    Length = curLength
 End Property
 
 'Set length which will truncate string or extend buffer
-Public Property Let length(newLength As Long)
+Public Property Let Length(newLength As Long)
     If newLength < 0 Then
         Err.Raise vbObjectError + 513, "StringBuilder", "Index out of range"
         Exit Property
@@ -91,12 +92,12 @@ Public Property Let Capacity(newLength As Long)
 End Property
 
 'Get the contents as a string
-Public Property Get text() As String
-    text = Left(buffer, curLength)
+Public Property Get Text() As String
+    Text = Left(buffer, curLength)
 End Property
 
 'Set the string
-Public Property Let text(newStr As String)
+Public Property Let Text(newStr As String)
     Me.Clear
     Me.Append newStr
 End Property
@@ -162,7 +163,7 @@ Public Sub Append(text As String)
     If dbg Then debugP
 End Sub
 
-'Insert text into the string which moves characters to make room
+'Insert text into the buffer which moves characters to make room
 Public Sub Insert(index As Long, text As String)
     Dim moveStr As String   ' the string moved
 
@@ -194,7 +195,7 @@ End Sub
 
 'Replace text in the buffer
 Public Sub Replace(findStr As String, newStr As String)
-    Me.text = VBA.Replace(Me.text, findStr, newStr)
+    Me.text = VBA.Replace(Me.Text, findStr, newStr)
 End Sub
 
 'Find text in the buffer
@@ -215,10 +216,9 @@ End Sub
 Private Sub debugP(Optional s As String)
     If IsMissing(s) Then
         Debug.Print curLength
-        Debug.Print ":" & Me.text & ":"
+        Debug.Print ":" & Me.Text & ":"
     Else
         Debug.Print curLength & s
-        Debug.Print ":" & Me.text & ":"
+        Debug.Print ":" & Me.Text & ":"
     End If
 End Sub
-
